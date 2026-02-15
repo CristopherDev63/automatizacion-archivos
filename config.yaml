@@ -1,0 +1,17 @@
+ruta_destino: "./tests/"
+
+crear_carpeta_archivos_organizados: true 
+
+archivos:
+  lista_extensiones:
+    - exe
+    - txt
+    - img 
+    - png
+    - jpg 
+    - doc
+    - pdf
+
+  lista_de_archivos_prohibidos:
+    - "./tests/script_test.py"
+    
