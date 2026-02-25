@@ -1,0 +1,6 @@
+archivos: []
+crear_carpeta_archivos_organizados: true
+lista_de_archivos_prohibidos:
+- ./tests/script_test.py
+ruta_destino: ./tests/
+ruta_origen: ./tests/
