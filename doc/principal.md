@@ -12,7 +12,7 @@ Dentro del [README](../README.md) explicamos los básico del proyecto. Pero vamo
 Después de haber mencionado todo esto. Esta documentación se divide por dos partes:
 
 - [Manual de usuario]() que sirve **Para los usuarios que solo lo quieren usar y no tienen conocimientos técnicos**.
-- [Documentación Técnica]() que sirve **Para desarrolladores que quieran trabajar en el proyecto**.
+- [Documentación Técnica](documentacion_tecnica/index.md) que sirve **Para desarrolladores que quieran trabajar en el proyecto**.
 
 ---
 
