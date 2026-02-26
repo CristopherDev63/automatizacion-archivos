@@ -6,7 +6,7 @@ Bienvenido a la documentación de técnica de Automatización de archivos. En es
 graph TD 
     %% Definicion de estilos 
     classDef proceso fill:#AEB784,stroke:#41431B,stroke-width:2px, color: black
-    classDef decision fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef decision fill:#FFB2B2,stroke:#E36A6A,stroke-width:2px, color black
     classDef archivo fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     classDef movimiento fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
     classDef verificacion fill:#ffebee,stroke:#b71c1c,stroke-width:2px
