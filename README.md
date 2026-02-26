@@ -1,5 +1,8 @@
 # Gestor de Archivos (plantilla)
 *La forma fácil y escalable para tener un gestor **automatizado** de archivos dentro de tu computadora*.
+El proyecto esta hecho en **Python** en es totalmente escalable y de código libre.
+
+Para ver la documentación completa haga click [[./doc/principal.md]]
 
 ---
 ## Instalación de las dependencias
@@ -12,15 +15,15 @@ Activamos nuestro entorno virtual.
 ```bash
 source venv/bin/activate
 ```
-Y por último descargamos las dependencias de Python.
-``` bash
-
-```
 
 ---
 ## Funciones 
-- Tiene la posibilidad 
+- Tiene archivos de configuración como `config.yaml` para configurar los parámetros del programa
+- Cada proceso se registra en un `registros.log` para ver cada proceso con fechas.
+- Contiene una lista de procesos escalable (Pipeline para los técnicos).
+- Contiene sistemas para detectar fallos dentro **de los archivos de configuración y en la hora de evitar archivos repetidos**.
 ---
+
 
 
 ## Correr el proyecto
