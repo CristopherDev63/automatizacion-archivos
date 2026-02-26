@@ -9,3 +9,11 @@ graph TD
     C --> E[Fin]
     D --> E
 ```
+
+```mermaid 
+graph TD 
+    A[Inicio] --> B[Se carga el archivo de configuración]
+    B --> |Tarea de proceso de datos| C[Se sacan los archivos de la configuración]
+    C --> |Contratos| D[Comprobamos que todos los valores esten en orden]
+    D --> |Tarea de sacar las exntesiones y organizarlas dentro de carpetas| E[Se crea plan de traslado de archivos]
+```
