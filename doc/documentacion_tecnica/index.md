@@ -5,11 +5,11 @@ Bienvenido a la documentación de técnica de Automatización de archivos. En es
 ```mermaid 
 graph TD 
     %% Definicion de estilos 
-    classDef proceso fill:#AEB784,stroke:#41431B,stroke-width:2px, color: black
-    classDef decision fill:#FFB2B2,stroke:#E36A6A,stroke-width:2px, color black
-    classDef archivo fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef movimiento fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef verificacion fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    classDef proceso fill:#84B179,stroke:black,stroke-width:2px, color: black
+    classDef decision fill:#A2CB8B,stroke:black,stroke-width:2px, color: black
+    classDef archivo fill:#C7EABB,stroke:black,stroke-width:2px, color: black
+    classDef movimiento fill:#E8F5BD,stroke:black,stroke-width:2px, color: black
+    classDef verificacion fill:#F8F3E1,stroke:#black,stroke-width:2px, color black
 
     Start([Inicio]) --> Config[Cargar el archivo de configuración]:::proceso
     Config --> Tarea_leer_config[Tarea: Leer la configuración y cargarlo]:::proceso
