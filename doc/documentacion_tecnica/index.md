@@ -16,4 +16,7 @@ graph TD
     B --> |Tarea de proceso de datos| C[Se sacan los archivos de la configuración]
     C --> |Contratos| D[Comprobamos que todos los valores esten en orden]
     D --> |Tarea de sacar las exntesiones y organizarlas dentro de carpetas| E[Se crea plan de traslado de archivos]
+    E --> |Tarea de verificación| G[Verificamos que no haya repetidos en le directorio]
+    G --> |Tarea de traslado| F[Movemos todos los archivos] 
+    F --> H[Fin]
 ```
