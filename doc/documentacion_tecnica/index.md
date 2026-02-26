@@ -13,6 +13,15 @@ graph TD
 
     Start([Inicio]) --> Config[Cargar el archivo de configuración]:::proceso
     Config --> Tarea_leer_config[Tarea: Leer la configuración y cargarlo]:::proceso
-    Tarea_leer_config --> Desicion_orden_contrato{¿Todos los parametros estan llenos y correctos?}:::decision
+    Tarea_leer_config --> Desicion_orden_contrato{Contrato: ¿Todos los parametros estan llenos y correctos?}:::decision
     Desicion_orden_contrato --> |no| mensaje_error[Arroja un error y detiene el proceso]:::proceso
+    mensaje_error --> Fin([Fin])
+
+    Desicion_orden_contrato --> |si| sacar_configuracion[Sacamos la configuración]:::proceso
+    sacar_configuracion --> generar_plan[Tarea: Generamos el plan de traslado de archivos]:::proceso
+    generar_plan --> Desicion_existencia_archivos{Tarea: ¿Tenemos archivos repetidos?}:::proceso
+    Desicion_existencia_archivos --> |no| proceso_preguntar_usuario{tarea: preguntar al usuario quiere sobreescribir los archivos o crear una copia}:::proceso
+    proceso_preguntar_usuario --> |sobreescribir| sobreescribir_archivo[eliminamos el archivo y lo trasladamos]
+    proceso_preguntar_usuario --> |copiar| copiar_archivo[renombramos el archivo con un más numero o le colocamos el texto "copia_n"] 
+
 ```
