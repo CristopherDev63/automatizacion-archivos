@@ -22,6 +22,6 @@ graph TD
     generar_plan --> Desicion_existencia_archivos{Tarea: ¿Tenemos archivos repetidos?}:::proceso
     Desicion_existencia_archivos --> |no| proceso_preguntar_usuario{tarea: preguntar al usuario quiere sobreescribir los archivos o crear una copia}:::proceso
     proceso_preguntar_usuario --> |sobreescribir| sobreescribir_archivo[eliminamos el archivo y lo trasladamos]
-    proceso_preguntar_usuario --> |copiar| copiar_archivo[renombramos el archivo con un más numero o le colocamos el texto "copia_n"] 
+    proceso_preguntar_usuario --> |copiar| copiar_archivo[renombramos el archivo con un más numero o le colocamos el texto copia_n] 
 
 ```
