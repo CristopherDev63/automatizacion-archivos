@@ -2,7 +2,7 @@
 *La forma fácil y escalable para tener un gestor **automatizado** de archivos dentro de tu computadora*.
 El proyecto esta hecho en **Python** en es totalmente escalable y de código libre.
 
-Para ver la documentación completa haga click [[./doc/principal.md]]
+Para ver la documentación completa haga click [aquí](doc/principal.md)
 
 ---
 ## Instalación de las dependencias
