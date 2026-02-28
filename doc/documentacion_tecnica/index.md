@@ -4,25 +4,32 @@ Bienvenido a la documentación de técnica de Automatización de archivos. En es
 ## Proceso general
 ```mermaid 
 graph TB
-    %% Definición de usuarios y sistemas externos
-    User([Usuario / Admin])
-    ExternalAPI[API Externa: Google/Stripe]
+    %% Recursos Externos
+    Config_File[(config.yaml<br/>Archivo de Config)]
 
-    subgraph Sistema_de_Automatizacion_Python [Tu App de Python]
+    subgraph Sistema_Pipeline [Programa de Automatización]
         direction TB
-        Main[<b>Main Entry Point</b><br/>'main.py'<br/>Orquestador]
-        
-        Logic[<b>Módulo de Tareas</b><br/>'tareas.py'<br/>Lógica de Negocio]
-        
-        ErrorH[<b>Gestor de Errores</b><br/>'errores.py'<br/>Custom Exceptions]
-        
-        Config[<b>Validación Pydantic</b><br/>Modelos de Configuración]
+        Main[<b>main.py</b><br/>Clases PipeLines y Proceso]
+        Modelos[<b>modelos.py</b><br/>Validación Pydantic]
+        Tareas[<b>tareas.py</b><br/>Lógica: cargar_config y definir_carpetas]
+        Errores[<b>errores.py</b><br/>Excepciones Personalizadas]
     end
 
-    %% Relaciones
-    User -->|Ejecuta / Dispara| Main
-    Main -->|Importa y usa| Logic
-    Main -->|Valida con| Config
-    Logic -.->|Lanza excepciones a| ErrorH
-    Logic -->|Consume datos de| ExternalAPI
+    %% Flujo de ejecución basado en tu código
+    Main -->|1. Solicita carga| Tareas
+    Tareas -->|2. Lee datos crudos| Config_File
+    Tareas -->|3. Instancia y Valida| Modelos
+    Modelos -.->|Si falla| Errores
+    
+    %% La "magia" de tu Smart-Context
+    Main -->|4. Inyecta 'ctx:Config Inicial.archivos'| Tareas
 ```
+Después de haber entendido el orden general vamos con le temario.
+
+## temario
+- [Arquitectura y Componentes](arquitectura_componentes.md)
+- [Guia de Configuración]()
+- [Flujo de Ejecución]()
+- [Guia Extensibilidad]()
+- [Referencia de Errores y Soluciones]()
+
